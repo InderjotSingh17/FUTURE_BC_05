@@ -8,7 +8,6 @@ def portfolio_view(request):
     total_value = 0
 
     if holdings:
-        # Join all coin names (lowercased) for CoinGecko API
         ids = ','.join([coin.name.lower() for coin in holdings])
         url = f'https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies=usd'
 
